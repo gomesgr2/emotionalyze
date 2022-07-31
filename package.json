@@ -1,0 +1,41 @@
+{
+  "name": "boilerplate-api-lanceiros",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "prisma:generate": "prisma generate",
+    "init-database": "prisma migrate dev --name init && npm run seed",
+    "seed": "ts-node src/infrastructure/db/seed.ts",
+    "test": "jest -u"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.6.0",
+    "@prisma/migrate": "^3.6.0",
+    "awilix": "^6.0.0",
+    "axios": "^0.27.2",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
+    "ibm-watson": "^7.0.0",
+    "jest-mock-extended": "^2.0.4",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.6.0",
+    "spotify-web-api-node": "^5.0.2",
+    "ts-node": "^10.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.3",
+    "ts-jest": "^27.1.1",
+    "typescript": "^4.5.2"
+  }
+}
